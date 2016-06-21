@@ -1,3 +1,7 @@
+# This is a hack to force old Homebrew to perform core/formula separation migration.
+# On some old system, `brew update` will try to load `tap_migrations.rb` file.
+require "migrate_remote"
+
 TAP_MIGRATIONS = {
   "adobe-air-sdk" => "homebrew/binary",
   "afuse" => "homebrew/fuse",
@@ -32,7 +36,6 @@ TAP_MIGRATIONS = {
   "clusterit" => "homebrew/x11",
   "cmucl" => "homebrew/binary",
   "comparepdf" => "homebrew/boneyard",
-  "connect" => "homebrew/boneyard",
   "coremod" => "homebrew/boneyard",
   "curlftpfs" => "homebrew/x11",
   "cwm" => "homebrew/x11",
@@ -150,6 +153,7 @@ TAP_MIGRATIONS = {
   "mysqlreport" => "homebrew/boneyard",
   "net6" => "homebrew/boneyard",
   "newick-utils" => "homebrew/science",
+  "ngrok" => "homebrew/boneyard",
   "nlopt" => "homebrew/science",
   "ntfs-3g" => "homebrew/fuse",
   "octave" => "homebrew/science",
